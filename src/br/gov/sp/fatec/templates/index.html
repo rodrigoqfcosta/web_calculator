@@ -7,7 +7,7 @@
     <title>Página Inicial</title>
 </head>
 <body>
-    <h1>{{hello}}</h1>
+    <h1>{{titulo}}</h1>
     <h2>{{sub_titulo}}</h2>
     {% for msg in mensagem %}
     <li>
@@ -19,6 +19,13 @@
     {% for msg2 in mensagem2 %}
     <li>
         <span>{{msg2}}</span>
+    </li>
+    {% endfor %}
+
+    <h2>{{sub_titulo3}}</h2>
+    {% for msg3 in mensagem3 %}
+    <li>
+        <span>{{msg3}}</span>
     </li>
     {% endfor %}
 </body>
