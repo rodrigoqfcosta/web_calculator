@@ -67,5 +67,5 @@ def historico():
     lista=[]
     calculos = Historico.query.all()
     for linha in calculos:
-        lista.append(f'{linha.calculo}')
+        lista.append(f'{linha.data_oper} - {linha.tipo_oper} - {linha.operacao} - {linha.argumentos}')
     return render_template('history.html', list=lista)
