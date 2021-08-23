@@ -122,4 +122,4 @@ Aluno                              | RA                | Github
 Rodrigo Querino Ferreira da Costa  | 1460481821081     | <a href="https://github.com/rodrigoqfcosta">GitHub</a>
 Gustavo Robert Moura da Conceição  | 1460481821035     | <a href="https://github.com/gusrobert">GitHub</a>
 
-> Orientador do projeto: Prof EMANUEL MINEDA CARNEIRO
+> Orientador do projeto: Prof FABRÍCIO GALENDE M. DE CARVALHO
