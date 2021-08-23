@@ -62,6 +62,11 @@ def index():
                             sub_titulo3='CALCULADORA ORIENTADA A SERVIÇOS:', mensagem3=msg3)
 
 
+@app.route('/calculadora')
+def calculadora():
+        return render_template('calculadora.html')
+
+
 @app.route('/historico')
 def historico():
     lista=[]
