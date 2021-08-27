@@ -101,7 +101,7 @@ Na pasta raiz do projeto execute os seguintes comandos:
 ```
 ###### CMD
 ```
-> set FLASK_APP=src\br\gov\sp\fatec\app
+> set FLASK_APP=src\main\app
 > set FLASK_ENV=development
 ```
 ###### Bash

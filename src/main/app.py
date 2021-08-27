@@ -6,6 +6,7 @@ app.config['SECRET_KEY'] = 'secret'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database/historic.db'
 
+
 db = SQLAlchemy(app)
 
 from controller.routes import *
