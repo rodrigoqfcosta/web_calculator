@@ -96,7 +96,7 @@ Na pasta raiz do projeto execute os seguintes comandos:
 
 ###### PowerShell
 ```
-> $env:FLASK_APP = "src\br\gov\sp\fatec\app"
+> $env:FLASK_APP = "src\main\app"
 > $env:FLASK_ENV = "development"
 ```
 ###### CMD
@@ -106,7 +106,7 @@ Na pasta raiz do projeto execute os seguintes comandos:
 ```
 ###### Bash
 ```
-$ export FLASK_APP=src\br\gov\sp\fatec\app
+$ export FLASK_APP=src\main\app
 $ export FLASK_ENV=development
 ```
 
