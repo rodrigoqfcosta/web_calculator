@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Inicial</title>
-</head>
-<body>
-    <h1>{{titulo}}</h1>
-    <h2>{{sub_titulo}}</h2>
-    {% for msg in mensagem %}
-    <li>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Página Inicial</title>
+    </head>
+    <body>
+        <h1>{{titulo}}</h1>
+        <a href="./calculadora">
+            <button style="height: 60px; width: 150px; font-size: large; font-weight: bold; margin-right: 10px;" >Calculadora</button>
+        </a>
+        <a href="./historico">
+            <button style="height: 60px; width: 150px; font-size: large; font-weight: bold;" >Histórico</button>
+        </a>
+        <h2>{{sub_titulo}}</h2>
+        {% for msg in mensagem %}
+        <li>
         <span>{{msg}}</span>
     </li>
     {% endfor %}
@@ -28,5 +34,6 @@
         <span>{{msg3}}</span>
     </li>
     {% endfor %}
+
 </body>
 </html>
