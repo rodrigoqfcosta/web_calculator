@@ -72,7 +72,7 @@ Em seguida efetue a instalação dos requirements:
 ```
 Acesse a pasta /databases do projeto e crie o arquivo historic.db:
 ```
-> cd pasta_projeto\src\br\gov\sp\fatec\database
+> cd pasta_projeto\src\main\database
 > touch historic.db
 ```
 Volte um nível no diretório até localizar o arquivo app.py e execute o comando "python", ativando o Python de usa venv, em seguida execute o comando "from app import db"
@@ -83,15 +83,15 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> from app import db
 >>> db.create_all()
 ```
-O comando acima cria a tabela do banco de dados conforme configurado no arquivo tabelas.py na pasta /model.
-Podemos averiguar o conteúdo do banco de dados executando o seguinte comando na pasta /databases:
+O comando acima, db.create_all(), cria a tabela do banco de dados conforme configurado no arquivo tabelas.py na pasta /model.
+É possivel averiguar o conteúdo do banco de dados executando o seguinte comando na pasta /databases:
 ```
 > sqlite3 .\historic.db
 sqlite> .tables
 sqlite> .schema historico
 ```
-Antes de rodar a aplicação precisamos configurar as variáveis de ambiente do Flask 
-(Local da aplicação e modo de Desenvolvimento)
+Antes de rodar a aplicação, precisamos configurar as variáveis de ambiente do Flask 
+(Local da aplicação e ativação do modo de Desenvolvimento)
 Na pasta raiz do projeto execute os seguintes comandos:
 
 ###### PowerShell
