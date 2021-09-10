@@ -72,7 +72,7 @@ Em seguida efetue a instalação dos requirements:
 ```
 Acesse a pasta /databases do projeto e crie o arquivo historic.db:
 ```
-> cd pasta_projeto\src\br\gov\sp\fatec\database
+> cd pasta_projeto\src\main\database
 > touch historic.db
 ```
 Volte um nível no diretório até localizar o arquivo app.py e execute o comando "python", ativando o Python de usa venv, em seguida execute o comando "from app import db"
