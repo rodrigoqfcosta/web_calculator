@@ -1,15 +1,19 @@
-from flask import Flask
+from flask import Flask, request, render_template
+from flask import jsonify
+from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'secret'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database/historic.db'
+CORS(app)
 
+#app.config['SECRET_KEY'] = 'secret'
+#app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:user123@localhost/historic'
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'mariadb+mariadbconnector://root:pass123@localhost/historic'
 
-db = SQLAlchemy(app)
+#db = SQLAlchemy(app)
 
 from controller.routes import *
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=5000)
