@@ -1,6 +1,6 @@
 from app import app
 from flask import render_template
-#from model.tabela import Historico
+from model.tabela import Log
 
 
 @app.route('/')
@@ -67,10 +67,10 @@ def calculadora():
         return render_template('calculadora.html')
 
 
-#@app.route('/historico')
-#def historico():
-#    lista=[]
-#    calculos = Historico.query.all()
-#    for linha in calculos:
-#        lista.append(f'{linha.data_oper} - {linha.tipo_oper} - {linha.operacao} - {linha.argumentos}')
-#    return render_template('history.html', list=lista)
+@app.route('/log')
+def log():
+    lista=[]
+    calculos = Log.query.all()
+    for linha in calculos:
+        lista.append(f'Data e hora: {linha.data_oper} - Tipo da operação: {linha.tipo_oper} - Operação: {linha.operacao} - Argumento utilizado: {linha.args}')
+    return render_template('log.html', list=lista)
