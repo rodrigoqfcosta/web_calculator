@@ -69,8 +69,8 @@ def calculadora():
 
 @app.route('/log')
 def log():
-    lista=[]
+    """ lista=[]
     calculos = Log.query.all()
     for linha in calculos:
-        lista.append(f'Data e hora: {linha.data_oper} - Tipo da operação: {linha.tipo_oper} - Operação: {linha.operacao} - Argumento utilizado: {linha.args}')
-    return render_template('log.html', list=lista)
+        lista.append(f'Data e hora: {linha.data_oper} - Tipo da operação: {linha.tipo_oper} - Operação: {linha.operacao} - Argumento utilizado: {linha.args}') """
+    return render_template('log.html')

@@ -6,17 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logs</title>
 </head>
-<body>
+<script src='static/jquery.min.js'></script>
+<script>
+    function get_logs() {
+        $.ajax({
+            url: 'http://localhost:5003/',
+            dataType: 'json',
+            crossOrigin: true,
+            success: function(data){                
+                var html = '';
+                data['result'].forEach(element => {
+                    html += '<tr><td>'
+                        +   element
+                        + '</td></tr>';
+                });
+
+                $('#dataTable').append(html);
+            }
+        })
+    }
+</script>
+<body onload="get_logs()">
     <h1>Logs</h1>
     <a href="./">
         <button>Página Inicial</button>
       </a>
 
     <hr>
-    {% for calculo in list %}
-    <li>
-        <span>{{calculo}}</span>
-    </li>
-    {% endfor %}
+
+    <table id="dataTable">
+        <tbody>
+
+        </tbody>
+    </table>
 </body>
 </html>
