@@ -6,24 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
 </head>
+<script src='static/jquery.min.js'></script>
+<script>
+
+  window.onload = function(){
+    btnCalc = document.getElementById('btnCalc');
+    arg1     = document.getElementById('arg1');
+    arg2     = document.getElementById('arg2');
+    operacao = document.getElementById('operacao');
+    lblResult = document.getElementById('lblResult');
+
+    operacao.onchange = function() {
+      arg2.disabled = operacao.value === "transcendental" ? true : false;
+    }
+
+    btnCalc.onclick = function(){
+      str_arg1 = arg1.value;
+      str_arg2 = arg2.value;
+      str_operacao = operacao.value;
+
+      if(str_operacao === "transcendental") {
+        $.ajax({
+          url: 'http://localhost:5004/api_gateway/'+str_operacao+'?arg1='+str_arg1,
+          dataType: 'json',
+          crossOrigin: true,
+          success: function(data){
+            lblResult.value = data.result;
+            }
+          });
+      } else {
+        $.ajax({
+          url: 'http://localhost:5004/api_gateway/'+str_operacao+'?arg1='+str_arg1+'&arg2='+str_arg2,
+          dataType: 'json',
+          crossOrigin: true,
+          success: function(data){
+            lblResult.value = data.result;
+          }
+        });
+      }
+    }
+  }
+</script>
 <body>
     
-<form action="getform.php" method="get">
+<form>
   <div>
-    1º Argumento: <input type="text" name="Argumento1" /><br />
-    2º Argumento: <input type="text" name="Argumento2" /><br />
+    1º Argumento: <input id="arg1" type="text"/><br />
+    2º Argumento: <input id="arg2" type="text"/><br /> 
   </div>
   
-  <select name="select">
-    <option value="valor1" selected>Adição</option>
-    <option value="valor2">Subtração</option>
-    <option value="valor3">Multiplicação</option>
-    <option value="valor4">Divisão</option>
-    <option value="valor5">Fatorial</option>
+  <select name="select" id="operacao">
+    <option value="soma" selected>Soma</option>
+    <option value="subtracao">Subtração</option>
+    <option value="multiplicacao">Multiplicação</option>
+    <option value="divisao">Divisão</option>
+    <option value="transcendental">Fatorial</option>
   </select>
     
-  <input type="submit" value="Calcular" />
-  </form>
+  
+  <button id="btnCalc" type="button">Calcular</button>
+
+  <br><label>Resultado</label>
+  <input type="text" name="" id="lblResult" disabled>
+</form>
 
   <a href="./">
     <button style="margin-top: 15px;">Voltar</button>
