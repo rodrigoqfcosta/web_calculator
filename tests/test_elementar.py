@@ -1,2 +1,6 @@
-def test_foo_bar():
-   assert True
+def f():
+    return 3
+
+
+def test_function():
+    assert f() == 4
