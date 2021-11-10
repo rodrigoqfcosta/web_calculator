@@ -1,9 +1,5 @@
-import requests
-
-def soma():
-    res =  requests.get("http://localhost:5004/api_gateway/soma?arg1=5&arg2=5")
-    resultJson = res.json()
-    return resultJson['result']
+def soma(n1, n2):
+    return n1+n2
 
 def test_function_soma():
-    assert soma() == 10
+    assert soma(5, 5) == 10
