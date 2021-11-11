@@ -60,7 +60,7 @@ O sistema para a internet deve possuir ao menos 2 interfaces totalmente distinta
 Antes de iniciar o projeto, certifique-se de habilitar o seu ambiente virtual (VENV):
 ###### MacOS/Linux:
 ```
-$ . venv/bin/activate
+$ source venv/bin/activate
 ```
 ###### Windows:
 ```
@@ -70,38 +70,18 @@ Em seguida efetue a instalação dos requirements:
 ```
 > pip install -r requirements.txt
 ```
-Acesse a pasta /databases do projeto e crie o arquivo historic.db:
-```
-> cd pasta_projeto\src\main\database
-> touch historic.db
-```
-Volte um nível no diretório até localizar o arquivo app.py e execute o comando "python", ativando o Python de usa venv, em seguida execute o comando "from app import db"
-```
-> python
-Python 3.9.6 (tags/v3.9.6:db3ff76, Jun 28 2021, 15:26:21) [MSC v.1929 64 bit (AMD64)] on win32
-Type "help", "copyright", "credits" or "license" for more information.
->>> from app import db
->>> db.create_all()
-```
-O comando acima, db.create_all(), cria a tabela do banco de dados conforme configurado no arquivo tabelas.py na pasta /model.
-É possivel averiguar o conteúdo do banco de dados executando o seguinte comando na pasta /databases:
-```
-> sqlite3 .\historic.db
-sqlite> .tables
-sqlite> .schema historico
-```
 Antes de rodar a aplicação, precisamos configurar as variáveis de ambiente do Flask 
 (Local da aplicação e ativação do modo de Desenvolvimento)
 Na pasta raiz do projeto execute os seguintes comandos:
 
 ###### PowerShell
 ```
-> $env:FLASK_APP = "src\main\app"
+> $env:FLASK_APP = "src/main/app"
 > $env:FLASK_ENV = "development"
 ```
 ###### CMD
 ```
-> set FLASK_APP=src\main\app
+> set FLASK_APP=src/main/app
 > set FLASK_ENV=development
 ```
 ###### Bash
@@ -114,6 +94,19 @@ Agora estamos prontos para executar a nossa aplicação:
 ```
 > flask run
 ```
+## :film_projector: Video demonstrativo
+<a href="https://youtu.be/whOxtTLIQDc">1ª Entrega</a>
+
+<a href="https://youtu.be/1USeqB5Laxc">2ª Entrega</a>
+
+## :jigsaw: Micro Serviços
+<a href="https://github.com/rodrigoqfcosta/api_gateway">API Gateway</a>
+
+<a href="https://github.com/rodrigoqfcosta/service_elementar">Calculo elementar</a>
+
+<a href="https://github.com/rodrigoqfcosta/service_transcendental">Calculo transcendental</a>
+
+<a href="https://github.com/rodrigoqfcosta/service_database">Persistencia no banco de dados</a>
 
 ## :octocat: Integrante do Projeto
 
