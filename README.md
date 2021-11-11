@@ -95,17 +95,14 @@ Agora estamos prontos para executar a nossa aplicação:
 > flask run
 ```
 ## :film_projector: Video demonstrativo
-<a href="https://youtu.be/whOxtTLIQDc">1ª Entrega</a>
-
-<a href="https://youtu.be/1USeqB5Laxc">2ª Entrega</a>
+<a href="https://youtu.be/whOxtTLIQDc">1ª Entrega - Prototipação</a></br>
+<a href="https://youtu.be/1USeqB5Laxc">2ª Entrega - Persistência de dados</a></br>
+<a href="https://youtu.be/04Vsk73hJzU">3ª Entrega - Integração continua</a>
 
 ## :jigsaw: Micro Serviços
-<a href="https://github.com/rodrigoqfcosta/api_gateway">API Gateway</a>
-
-<a href="https://github.com/rodrigoqfcosta/service_elementar">Calculo elementar</a>
-
-<a href="https://github.com/rodrigoqfcosta/service_transcendental">Calculo transcendental</a>
-
+<a href="https://github.com/rodrigoqfcosta/api_gateway">API Gateway</a></br>
+<a href="https://github.com/rodrigoqfcosta/service_elementar">Calculo elementar</a></br>
+<a href="https://github.com/rodrigoqfcosta/service_transcendental">Calculo transcendental</a></br>
 <a href="https://github.com/rodrigoqfcosta/service_database">Persistencia no banco de dados</a>
 
 ## :octocat: Integrante do Projeto
