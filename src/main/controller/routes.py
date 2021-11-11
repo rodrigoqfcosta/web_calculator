@@ -1,11 +1,10 @@
 from app import app
 from flask import render_template
-from model.tabela import Log
 
 
 @app.route('/')
 def index():
-    msg = [ '1. Utilizar linguagem de programação Python (versão 3.6 ou superior) no back end;',
+        msg = [ '1. Utilizar linguagem de programação Python (versão 3.6 ou superior) no back end;',
             '2. Utilizar SQLAlchemy (1.2.19 ou superior) para persistência de dados;',
             '3. Utilizar Jinja 2 ou similar para geração de páginas dinâmicas (tipo template);',
             '4. Utilizar o microframework Flask para implantação do sistema web;',
@@ -14,7 +13,7 @@ def index():
             '7. Estruturar o sistema seguindo a arquitetura MVC;',
             '8. Sistema Gerenciador de Banco de Dados MariaDB.']
     
-    msg2 = ['''1. Exemplificar a utilização de três recursos da linguagem de programação JavaScript, 
+        msg2 = ['''1. Exemplificar a utilização de três recursos da linguagem de programação JavaScript, 
             desenvolvendo código-fonte sem fazer uso de bibliotecas ou frameworks de terceiros.
             Além dessas três funcionalidades, utilizar Ajax em alguma funcionalidade do sistema.''',
             '''2. Exemplificar a construção de três regras CSS, sem fazer uso de frameworks ou
@@ -27,7 +26,7 @@ def index():
             '''4. Sua aplicação web deve conter um menu para navegação e, no mínimo, duas interfaces
             distintas com o usuário, acessíveis a partir do menu.''']
     
-    msg3 = ['''Desenvolver um sistema simples que se comporte como uma calculadora orientada a serviços.''',
+        msg3 = ['''Desenvolver um sistema simples que se comporte como uma calculadora orientada a serviços.''',
             '''A calculadora deve ser provida, pelo menos de 3 operações, divididas em duas categorias:''',
             '''1. Operações Elementares (e.g.: soma, subtração);''',
             '''2. Operações envolvendo funções transcendentes (e.g.: seno, cosseno, tangente, exponencial, tangente hiperbólica) ''',
@@ -56,7 +55,7 @@ def index():
             '''	1. Interface para execução das operações.''',
             '''	2. Interface para exibição do log de operações, podendo filtrar os logs, para exibição, por data e por tipo de operação.''']
 
-    return render_template('index.html', titulo='Hello, World!', 
+        return render_template('index.html', titulo='Hello, World!', 
                             sub_titulo='REQUISITOS E RESTRIÇÕES GERAIS - TECNOLOGIA PYTHON:', mensagem=msg, 
                             sub_titulo2='REQUISITOS E RESTRIÇÕES COMUNS:', mensagem2=msg2,
                             sub_titulo3='CALCULADORA ORIENTADA A SERVIÇOS:', mensagem3=msg3)
@@ -69,8 +68,4 @@ def calculadora():
 
 @app.route('/log')
 def log():
-    """ lista=[]
-    calculos = Log.query.all()
-    for linha in calculos:
-        lista.append(f'Data e hora: {linha.data_oper} - Tipo da operação: {linha.tipo_oper} - Operação: {linha.operacao} - Argumento utilizado: {linha.args}') """
-    return render_template('log.html')
+        return render_template('log.html')
