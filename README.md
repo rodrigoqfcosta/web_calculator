@@ -97,7 +97,7 @@ Agora estamos prontos para executar a nossa aplicação:
 ## :film_projector: Video demonstrativo
 <a href="https://youtu.be/whOxtTLIQDc">1ª Entrega - Prototipação</a></br>
 <a href="https://youtu.be/1USeqB5Laxc">2ª Entrega - Persistência de dados</a></br>
-<a href="https://youtu.be/04Vsk73hJzU">3ª Entrega - Integração continua</a>
+<a href="https://youtu.be/AuEtabs3Y68">3ª Entrega - Integração continua</a>
 
 ## :jigsaw: Micro Serviços
 <a href="https://github.com/rodrigoqfcosta/api_gateway">API Gateway</a></br>
